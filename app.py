@@ -9,14 +9,12 @@ from botbuilder.core import (
     TurnContext,
     MemoryStorage,
     UserState,
-    CloudAdapter,
-    ConfigurationBotFrameworkAuthentication,
-    BotFrameworkAdapter
+    BotFrameworkAdapter,
+    BotFrameworkAdapterSettings
 )
 from botbuilder.core.integration import aiohttp_error_middleware
 from botbuilder.schema import Activity, ChannelAccount
 from dotenv import load_dotenv
-import asyncio
 
 # 載入環境變數
 load_dotenv()
@@ -24,21 +22,18 @@ load_dotenv()
 # 從環境變數取資料
 MICROSOFT_APP_ID = os.environ.get("MicrosoftAppId", "")
 MICROSOFT_APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
-MICROSOFT_TENANT_ID = os.environ.get("MicrosoftTenantId", "")
 PORT = int(os.environ.get("PORT", 3978))
 
 # 設定日誌
 logging.basicConfig(level=logging.INFO)
 
-# 建立 CloudAdapter
-bot_framework_authentication = ConfigurationBotFrameworkAuthentication(
+# 建立 BotFrameworkAdapter (替代 CloudAdapter)
+SETTINGS = BotFrameworkAdapterSettings(
     app_id=MICROSOFT_APP_ID,
-    app_password=MICROSOFT_APP_PASSWORD,
-    app_tenant_id=MICROSOFT_TENANT_ID,
-    app_type="SingleTenant"  # 依照多租或單租選填
+    app_password=MICROSOFT_APP_PASSWORD
 )
 
-adapter = CloudAdapter(bot_framework_authentication)
+adapter = BotFrameworkAdapter(SETTINGS)
 
 # 全局錯誤處理
 async def on_error(context: TurnContext, error: Exception):
@@ -103,11 +98,6 @@ async def messages(req: Request) -> Response:
 def create_app() -> web.Application:
     app = web.Application(middlewares=[aiohttp_error_middleware])
     app.router.add_post("/api/messages", messages)
-    return app
-
-async def init_app():
-    """初始化應用程式"""
-    app = create_app()
     return app
 
 if __name__ == "__main__":
