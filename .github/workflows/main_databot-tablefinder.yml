@@ -58,4 +58,4 @@ jobs:
         with:
           app-name: 'DataBot-TableFinder'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C29B84D6E6B34E96BF968C3176A807AA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66F9E8F005324104AE866FD4248516FA }}
