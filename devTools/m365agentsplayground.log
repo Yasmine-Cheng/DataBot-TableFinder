@@ -6,18 +6,12 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(12832) complete
+log wait-on(13816) complete
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"zh-TW\",\"localTimezone\":\"Asia/Taipei\",\"channelId\":\"msteams\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"5b35091c-2f1c-4e71-9a30-f983e210912d","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"faa7d189-e17c-4a94-92f4-3b7f7c225319","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"5b35091c-2f1c-4e71-9a30-f983e210912d","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"faa7d189-e17c-4a94-92f4-3b7f7c225319","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"5b35091c-2f1c-4e71-9a30-f983e210912d","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"5b35091c-2f1c-4e71-9a30-f983e210912d","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"team-id","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"team-id","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"faa7d189-e17c-4a94-92f4-3b7f7c225319","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 

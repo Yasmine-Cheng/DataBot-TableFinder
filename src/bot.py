@@ -41,7 +41,8 @@ prompts.add_data_source(
     AzureAISearchDataSource(
         AzureAISearchDataSourceOptions(
             name='azure-ai-search',
-            indexName='contoso-electronics',
+            # indexName='contoso-electronics',
+            indexName='azure_tablefinder_1122',
             azureAISearchApiKey=config.AZURE_SEARCH_KEY,
             azureAISearchEndpoint=config.AZURE_SEARCH_ENDPOINT,
         )

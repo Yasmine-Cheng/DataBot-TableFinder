@@ -1,66 +1,40 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.21",
     "version": "1.0.0",
-    "id": "${{TEAMS_APP_ID}}",
+    "manifestVersion": "1.21",
+    "id": "1f540112-248b-40bc-b1f2-3441a09de6ba",
+    "name": {
+        "short": "DataBot",
+        "full": "DataBot-TableFinder"
+    },
     "developer": {
         "name": "My App, Inc.",
         "websiteUrl": "https://www.example.com",
         "privacyUrl": "https://www.example.com/privacy",
         "termsOfUseUrl": "https://www.example.com/termofuse"
     },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "DataBot-TableFinder${{APP_NAME_SUFFIX}}",
-        "full": "full name for DataBot-TableFinder"
-    },
     "description": {
         "short": "智慧資料表搜尋助手，根據需求描述快速推薦最符合的5張資料表，提升資料查找效率。",
         "full": "DataBot-TableFinder 是一款專為企業內部資料管理而設計的智慧型AI助手，透過自然語言互動方式，幫助公司同仁快速且精準地找到所需的資料表。無論您是資料分析師、業務人員、研發工程師或管理階層，都能輕鬆透過簡單的對話，獲得最符合需求的資料表推薦。 核心功能 🔍 智慧搜尋引擎 運用先進的AI技術，理解使用者的自然語言描述，無論是功能用途說明或技術細節描述，都能精準解析需求並提供相關建議。 📊 精準推薦系統 基於需求分析，從公司龐大的資料庫中篩選並推薦5張最符合條件的資料表，每個推薦都附有詳細說明和相關度評分。 💬 自然語言互動 支援多種描述方式： 用途導向：「我需要分析客戶購買行為的資料」 技術細節：「包含客戶ID、購買日期、產品類別欄位的表格」 混合描述：「銷售部門用的月報表，要有營收和客戶數據」 適用對象 ✅ 業務分析師 - 快速找到支援決策分析的資料表 ✅ 資料科學家 - 尋找機器學習和統計分析所需的數據集 ✅ 產品經理 - 獲取產品相關的用戶行為和市場數據 ✅ 財務人員 - 查找財務報表和成本分析相關資料 ✅ 研發團隊 - 取得產品開發和測試相關的技術數據 ✅ 管理階層 - 快速獲取營運決策所需的綜合性資料 使用方式 描述需求：用自然語言描述您的資料需求 AI分析：系統智慧解析您的要求和上下文 推薦結果：獲得5個最佳資料表推薦 詳細資訊：每個推薦包含表格描述、欄位資訊、資料庫位置等 快速存取：直接獲取資料表存取路徑和使用權限資訊 產品優勢 ⚡ 效率提升：從數小時的手動搜尋縮短至數分鐘的智慧推薦 🎯 精準匹配：先進的語意理解技術，確保推薦結果高度相關 🔒 安全可靠：遵循公司資料安全政策，確保敏感資料的存取控制 🚀 持續學習：AI系統不斷學習使用者反饋，持續優化推薦準確度 📱 便捷整合：完美融入Microsoft Teams工作環境，無需切換平台 實際應用情境 情境一：季度業績分析 使用者：「我需要製作Q3銷售報告，要包含各產品線的營收數據」 系統推薦：銷售明細表、產品營收彙總表、客戶採購記錄等相關資料表 情境二：客戶行為研究 使用者：「想分析客戶在網站上的瀏覽和購買模式」 系統推薦：網站行為追蹤表、購買歷史記錄、客戶資訊表等數據集 情境三：供應鏈優化 使用者：「需要庫存和供應商相關的資料來優化採購流程」 系統推薦：庫存管理表、供應商評估表、採購記錄表等相關資料 技術特色 多維度匹配：結合表格名稱、欄位資訊、使用頻率、資料新鮮度等多項指標 語意理解：支援中英文混合查詢，理解專業術語和業務語言 學習能力：基於使用者反饋和歷史查詢記錄，持續優化推薦演算法 即時更新：資料表異動時自動更新索引，確保推薦結果的時效性 開始使用 現在就開始體驗DataBot-TableFinder，讓AI成為您資料查找的最佳助手！只需在Teams中輸入您的資料需求，幾秒鐘內就能獲得專業的資料表推薦，大幅提升工作效率，讓資料驅動決策變得更加簡單直接。立即啟用DataBot-TableFinder，開啟您的智慧資料管理新體驗！"
     },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
     "accentColor": "#FFFFFF",
     "bots": [
         {
-            "botId": "${{BOT_ID}}",
+            "botId": "95481bfb-fdf3-4485-9003-515f144a23c4",
             "scopes": [
                 "team",
                 "groupChat",
                 "personal"
             ],
-            "supportsFiles": false,
             "isNotificationOnly": false,
-            "commandLists": [
-                {
-                    "scopes": [
-                        "personal"
-                    ],
-                    "commands": [
-                        {
-                            "title": "List Contoso history in table",
-                            "description": "Tell me the history of Contoso Electronics, format in a table."
-                        },
-                        {
-                            "title": "Compare Contoso Electronics plan",
-                            "description": "Compare different Contoso Electronics benefit package plans"
-                        },
-                        {
-                            "title": "Summarize PerksPlus Program",
-                            "description": "Summarize Contoso Electronics PerksPlus Program"
-                        }
-                    ]
-                }
-            ]
+            "supportsCalling": false,
+            "supportsVideo": false,
+            "supportsFiles": false
         }
-    ],
-    "composeExtensions": [],
-    "configurableTabs": [],
-    "staticTabs": [],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
     ],
     "validDomains": [
         "databot-tablefinder-hagrdbhva4eyaahw.canadacentral-01.azurewebsites.net"
