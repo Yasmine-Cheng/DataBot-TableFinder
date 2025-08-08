@@ -23,4 +23,3 @@ class Config:
     AZURE_OPENAI_EMBEDDING_DEPLOYMENT = os.environ["AZURE_OPENAI_EMBEDDING_DEPLOYMENT"] # Azure OpenAI embedding deployment
     AZURE_SEARCH_KEY = os.environ["AZURE_SEARCH_KEY"] # Azure Search key
     AZURE_SEARCH_ENDPOINT = os.environ["AZURE_SEARCH_ENDPOINT"] # Azure Search endpoint
-    
